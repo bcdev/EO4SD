@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<pubdate>20202905</pubdate>
+				<title>Shoreline Change Tunisia 2000-2020 (Transects at 50m intervals).
+
+Service - Coastal Change Mapping</title>
+				<geoform>Vector Digital Data</geoform>
+				<descript>
+					<abstract>Shoreline Change Transects which include erosion rates based on optcial satellite delinated shorelines. Based on Landsat 7, 8 and Sentinel 2 data from 2000-2020 in the month of May. Transects are 50m intervals along the Tunisia shoreline and are based on a wieghted linear regression. Dataset is provided as vector datatset within a geodatabase.</abstract>
+				</descript>
+				<spdom>
+					<bounding>
+						<westbc>-11.78193</westbc>
+						<eastbc>-0.998429</eastbc>
+						<northbc>35.922427</northbc>
+						<southbc>27.662038</southbc>
+					</bounding>
+				</spdom>
+				<keywords>
+					<theme>
+						<themekey>Environment</themekey>
+					</theme>
+					<place>
+						<placekey>Tunisia</placekey>
+					</place>
+				</keywords>
+				<pubinfo>
+					<publish>Data set was developed for the World Bank on behalf of the National Oceanography Centre</publish>
+					<pubplace>Southampton</pubplace>
+					<pubdate>20202905</pubdate>
+				</pubinfo>
+				<onlink>Geodatabase - https://storage.cloud.google.com/eo4sd-271513.appspot.com/North%20Africa/Tunisia/Tunisia_shoreline_change_2020.gdb.zip
+
+Metadata - https://storage.cloud.google.com/eo4sd-271513.appspot.com/North%20Africa/Tunisia/Tunisia_shoreline_change_2020.xml</onlink>
+			</citeinfo>
+		</citation>
+		<timeperd>
+			<timeinfo>
+				<rngdates>
+					<begdate>20000501</begdate>
+					<enddate>20200530</enddate>
+				</rngdates>
+			</timeinfo>
+		</timeperd>
+		<status>
+			<progress>In work</progress>
+			<update>None Planned</update>
+		</status>
+		<accconst>None</accconst>
+		<useconst>None</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>National Oceanography Centre</cntorg>
+					<cntper>Stephen Carpenter</cntper>
+				</cntorgp>
+				<cntpos>Research Assisstant</cntpos>
+				<cntaddr>
+					<address>European Way, Southampton SO14 3ZH</address>
+				</cntaddr>
+			</cntinfo>
+		</ptcontac>
+		<datacred>National Oceanography Centre, World Bank</datacred>
+		<accesscont>Open Dataset</accesscont>
+		<usecont>Open Dataset</usecont>
+		<native>ArcGIS, Windows 10</native>
+	</idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>The U.S Geological Survey (USGS) provides a suggested default value of uncertainty of 10 meters, which is the approximate average of
+uncertainty of various shoreline data types used in recent regional reports that the U.S. Geological Survey has published under
+the National Assessment of Shoreline Change project.</attraccr>
+			<logic>None Performed - in work</logic>
+			<complete>80% complete
+No data in places due to lack of suitable satellite data &lt;3. I.e. too much clud</complete>
+		</attracc>
+		<posacc>
+			<posrep>No checks completed, assume accruacy within 10m</posrep>
+		</posacc>
+		<lineage>
+			<procstep>Delineating the shoreline - Coastsat
+1.Retrieval of the images from the GEE archive
+2. Pre-processing (Cloud masking and pan-sharpening)
+3.Shoreline detection using Otsu's threshold of NMDWI and iso-contours.
+4. Shoreline Cleaning
+
+Shoreline Change Statistics - DSAS
+1. Weighted linear regression of intersecting shorelines with transects at 50m intervals
+
+For more information:
+Coastsat - CoastSat: A Google Earth Engine-enabled Python toolkit to extract shorelines from publicly available satellite imagery (Vos et al., 2019a)
+applications including accuracy are discussed in Sub-annual to multi-decadal shoreline variability from publicly available satellite imagery (Vos et al., 2019b)</procstep>
+			<cntinfo>
+				<cntorg>National Oceanography Centre</cntorg>
+				<cntper>Stephen Carpenter</cntper>
+				<cntpos>Research Assisstant</cntpos>
+				<address>European Way, Southampton SO14 3ZH</address>
+			</cntinfo>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct>Vector</direct>
+	</spdoinfo>
+	<sprefinfo>
+		<coordsys>Carthage / Tunisia Mining Grid</coordsys>
+		<sptres>Line</sptres>
+		<plan_dis_unts>Meters</plan_dis_unts>
+	</sprefinfo>
+	<attr>
+		<attr_description>Fields:
+OBJECTID = It establishes a unique ID for each row in the attribute table
+Geometry (alias: Shape) = The geometry field is automatically created and maintained by ArcGIS. It provides
+a definition of the feature type (point, line, polygon).
+Shr_count = Number of intersecting shorelines
+LRR = Linear Regression rate
+LR2 = R-squared of linear regression
+LSE = Standard Error of linear regression
+LCI95 = Confidence interval of linear gression (i.e. if LRR = 1.34m/yr and LCI95 = 0.7m/yr. Reported rate = 1.34 +-0.7m/yr with 95% confidence)</attr_description>
+	</attr>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorg>National Oceanography Centre</cntorg>
+				<cntper>Stephen Carpenter</cntper>
+				<cntpos>Research Assisstant</cntpos>
+				<address>European Way, Southampton SO14 3ZH</address>
+			</cntinfo>
+		</distrib>
+		<distliab>None</distliab>
+	</distinfo>
+	<metainfo>
+		<metd>20200529</metd>
+		<metc>Stephen Carpenter</metc>
+		<metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>As of Oct 2002: FGDC-STD-001-1998</metstdv>
+	</metainfo>
+</metadata>

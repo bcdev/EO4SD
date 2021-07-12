@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<pubdate>20200610</pubdate>
+				<title>Togo and Benin 2019 Shorlines</title>
+				<geoform>"vector digital data"</geoform>
+				<descript>
+					<abstract>shoreline shapefile was created by temporaly stacking 31 Sentinel-1 SAR images from 2019 then applying statistical edge detection using enhanced Region of Averages method.</abstract>
+					<supplinf>None</supplinf>
+				</descript>
+				<spdom>
+					<bounding>
+						<westbc>1.08</westbc>
+						<eastbc>2.43</eastbc>
+						<northbc>6.49</northbc>
+						<southbc>6.03</southbc>
+					</bounding>
+				</spdom>
+				<keywords>
+					<theme>
+						<themekey>Environmental</themekey>
+					</theme>
+					<place>
+						<placekey>Togo and Benin</placekey>
+					</place>
+				</keywords>
+				<pubinfo>
+					<publish>NOC</publish>
+					<pubplace>Sotuhampton</pubplace>
+				</pubinfo>
+				<onlink>None</onlink>
+			</citeinfo>
+		</citation>
+		<timeperd>
+			<timeinfo>
+				<rngdates>
+					<begdate>20190101</begdate>
+					<enddate>20191230</enddate>
+				</rngdates>
+			</timeinfo>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>None Planned</update>
+		</status>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>National Oceanography Centre</cntorg>
+					<cntper>Clive Neil</cntper>
+				</cntorgp>
+				<cntpos>applied coastal satellite specialist</cntpos>
+				<cntaddr>
+					<address>European Way, Southampton, SO14 3ZH</address>
+				</cntaddr>
+				<cntemail>cneil@noc.ac.uk</cntemail>
+			</cntinfo>
+		</ptcontac>
+		<datacred>National Oceanography Centre</datacred>
+		<accesscont>Open Dataset</accesscont>
+		<usecont>Open Dataset</usecont>
+		<native>QGIS</native>
+	</idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>stastistical edge detecctio to delinaete shoreline will always produce some artifacts in land due to the compromises require in parameter selection - the moethod will not delineate all shoreline depending on the physical nature of the coast</attraccr>
+			<complete>100%</complete>
+		</attracc>
+		<posacc>
+			<posrep>within 1 pixel in each direction</posrep>
+		</posacc>
+		<lineage>
+			<cntinfo>
+				<cntorg>National Oceanography Centre</cntorg>
+				<cntper>Clive Neil</cntper>
+				<cntpos>applied coastal satellite specialist</cntpos>
+				<address>European Way, Southampton, SO14 3ZH</address>
+				<cntemail>cneil@noc.ac.uk</cntemail>
+			</cntinfo>
+		</lineage>
+	</dataqual>
+	<spdoinfo/>
+	<sprefinfo>
+		<sptres>10</sptres>
+		<plan_dis_unts>meters</plan_dis_unts>
+	</sprefinfo>
+	<attr/>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorg>National Oceanography Centre</cntorg>
+				<cntper>Clive Neil</cntper>
+				<cntpos>applied coastal satellite specialist</cntpos>
+				<address>European Way, Southampton, SO14 3ZH</address>
+				<cntemail>cneil@noc.ac.uk</cntemail>
+			</cntinfo>
+		</distrib>
+		<distliab>None</distliab>
+	</distinfo>
+	<metainfo>
+		<metd>20200610</metd>
+		<metc>Stephen Carpenter</metc>
+		<metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>As of Oct 2002: FGDC-STD-001-1998</metstdv>
+	</metainfo>
+</metadata>
