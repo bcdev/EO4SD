@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<pubdate>20211014</pubdate>
+				<title>Marine Pollution, Senegal, Apr-Sept 2021.
+
+Service - Oil Spill Detection</title>
+				<geoform>Vector Digital Data</geoform>
+				<descript>
+					<abstract>Oil Spill Detection maps include oil spill vector data and the backscatter coefficient SAR images of Senegal.  The data are provided  in Google Maps KMZ format.</abstract>
+					<supplinf>None</supplinf>
+				</descript>
+				<spdom>
+					<bounding>
+						<westbc>-20.21423</westbc>
+						<eastbc>-16.50902</eastbc>
+						<northbc>16.06806</northbc>
+						<southbc>10.64522</southbc>
+					</bounding>
+				</spdom>
+				<keywords>
+					<theme>
+						<themekey>Environment</themekey>
+					</theme>
+					<place>
+						<placekey>Senegal</placekey>
+					</place>
+				</keywords>
+				<pubinfo>
+					<publish>Data set was developed at Plymouth Marine Laboratory</publish>
+					<pubplace>Plymouth</pubplace>
+					<pubdate>20211014</pubdate>
+				</pubinfo>
+				<onlink>https://rsg.pml.ac.uk/shared_files/anku/EO4SD/OSD_KML_Senegal</onlink>
+			</citeinfo>
+		</citation>
+		<timeperd>
+			<timeinfo>
+				<rngdates>
+					<begdate>20210401</begdate>
+					<enddate>20210930</enddate>
+				</rngdates>
+			</timeinfo>
+		</timeperd>
+		<status>
+			<progress>In work</progress>
+			<update>Daily updated </update>
+		</status>
+		<accconst>None</accconst>
+		<useconst>None</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>Plymouth Marine Laboratory</cntorg>
+					<cntper>Andrey Kurekin</cntper>
+				</cntorgp>
+				<cntpos>Scientist</cntpos>
+				<cntaddr>
+					<address>Prospect Place
+Plymouth
+PL1 3DH
+Prospect Place, Plymouth PL1 3DH </address>
+				</cntaddr>
+				<cntemail>anku@pml.ac.uk</cntemail>
+			</cntinfo>
+		</ptcontac>
+		<datacred>Plymouth Marine Laboratory, World Bank</datacred>
+		<accesscont>Open Dataset</accesscont>
+		<usecont>Open Dataset</usecont>
+		<native>Google Earth, any platform </native>
+	</idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr>None</attraccr>
+			<logic>None Performed - in work</logic>
+			<complete>None</complete>
+		</attracc>
+		<posacc>
+			<posrep>No checks completed, assume accruacy within 10m</posrep>
+		</posacc>
+		<lineage>
+			<procstep>Oil spill detection - Sentinel-1 SAR
+1.Retrieval of the images from the Copernicus Open Access Hub
+2. Pre-processing: Calibration, land masking, mapping
+3.Detection of dark spots
+4. Classifying dark spots into oil spills and look-alikes
+</procstep>
+			<cntinfo>
+				<cntorg>Plymouth Marine Laboratory</cntorg>
+				<cntper>Andrey Kurekin</cntper>
+				<cntpos>Scientist</cntpos>
+				<address>Prospect Place, Plymouth PL1 3DH</address>
+				<cntemail>anku@pml.ac.uk</cntemail>
+			</cntinfo>
+		</lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct>Vector</direct>
+	</spdoinfo>
+	<sprefinfo>
+		<coordsys>Geographic</coordsys>
+		<sptres>Line</sptres>
+		<plan_dis_unts>Decimal degrees</plan_dis_unts>
+	</sprefinfo>
+	<attr>
+		<attr_description>Fields:
+Detected Oil Spills = the oil spills detected in SAR image, outlined in red, a yellow baloon icon is placed in the centre of oil spill; Detected Ships = the vessels detected in SAR images, the green icons show vessel locations; Covered area = the geographical area covered by SAR sensor, outlined in blue </attr_description>
+	</attr>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorg>Plymouth Marine Laboratory</cntorg>
+				<cntper>Andrey Kurekin</cntper>
+				<cntpos>Scientist</cntpos>
+				<address>Prospect Place, Plymouth PL1 3DH</address>
+				<cntemail>anku@pml.ac.uk</cntemail>
+			</cntinfo>
+		</distrib>
+		<distliab>None</distliab>
+	</distinfo>
+	<metainfo>
+		<metd>20211014</metd>
+		<metc>Andrey Kurekin</metc>
+		<metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+		<metstdv>As of Oct 2002: FGDC-STD-001-1998</metstdv>
+	</metainfo>
+</metadata>
