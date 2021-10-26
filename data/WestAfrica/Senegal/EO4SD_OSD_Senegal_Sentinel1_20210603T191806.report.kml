@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>EO4SD, OSD Sentinel1, Senegal, Date 2021-06-03, Time 19:18:06 UTC</name>
+	<description>
+Project: Earth Observation for Sustainable Development (EO4SD) - Marine Resources 
+<br/>(http://eo4sd-marine.eu) <br/>
+A report on oil spill detection using Sentinel-1 SAR sensor EO data <br/>
+Date: 03 June 2021 <br/>
+Time: 19:18:06  (UTC - Universal Time Coordinated) <br/>
+Area: Senegal Exclusive Economic Zone <br/>
+Scene: S1A_IW_GRDH_1SDV_20210603T191806_20210603T191831_038180_048188_9323 <br/>
+<br/>
+------------------------------------------------------------------------------ <br/>
+Plymouth Marine Laboratory (www.pml.ac.uk) <br/>
+Prospect Place <br/>
+Plymouth <br/>
+PL1 3DH <br/>
+United Kingdom <br/>
+Tel: +44 (0)1752 633 100 <br/>
+Fax: +44 (0)1752 633 101 <br/>
+For general enquiries please contact: forinfo@pml.ac.uk <br/>
+For enquiries relating this report please contact: anku@pml.ac.uk <br/>
+</description>
+	<Style id="oil_spill">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/ylw-diamond.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/ylw-diamond-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>660000ff</color>
+		</PolyStyle>
+	</Style>
+	
+    <Style id="ship">
+		<IconStyle>
+			<color>ff00ff00</color>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/sailing.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>	
+	
+	<Style id="image">
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ffffaa00</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff7fff55</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>	
+	
+  <Schema name="" id="detected_ships_sar">
+    <SimpleField name="lat" type="float"></SimpleField>
+    <SimpleField name="lon" type="float"></SimpleField>
+    <SimpleField name="width" type="float"></SimpleField>
+    <SimpleField name="length" type="float"></SimpleField>
+  </Schema>
+
+  <Schema name="" id="detected_oil_sar">
+    <SimpleField name="lat" type="float"></SimpleField>
+    <SimpleField name="lon" type="float"></SimpleField>
+    <SimpleField name="area" type="float"></SimpleField>    
+    <SimpleField name="risk" type="float"></SimpleField>
+    <SimpleField name="id" type="int"></SimpleField>
+  </Schema>
+
+  <Folder>
+   <name>Detected Oil Spills</name>
+   <TimeStamp>
+     <when>2021-06-03T19:18:06Z</when>
+   </TimeStamp>
+
+   <Folder>
+    <name>Oil spill</name>
+    <open>1</open>
+
+    <Placemark>
+      <name>_</name>
+      <styleUrl>#oil_spill</styleUrl>
+      <ExtendedData><SchemaData schemaUrl="#detected_oil_sar">
+        <SimpleData name="lat">14.6795</SimpleData>
+        <SimpleData name="lon">-17.2244</SimpleData>
+        <SimpleData name="area, sq.km">0.4600</SimpleData>        
+        <SimpleData name="risk">0.713</SimpleData>
+        <SimpleData name="id">7</SimpleData>
+      </SchemaData></ExtendedData>
+      <Point><coordinates>-17.2244,14.6795</coordinates></Point>
+    </Placemark>    
+ 
+    <Placemark>
+      <name>0</name>
+      <styleUrl>#oil_spill</styleUrl>
+
+      <Polygon>
+        <tessellate>1</tessellate>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.2287,14.6781 -17.2287,14.6780 -17.2286,14.6780 -17.2287,14.6780 -17.2287,14.6781 
+
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+
+      </Polygon>        
+    </Placemark>      
+ 
+    <Placemark>
+      <name>1</name>
+      <styleUrl>#oil_spill</styleUrl>
+
+      <Polygon>
+        <tessellate>1</tessellate>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.2291,14.6801 -17.2292,14.6800 -17.2292,14.6799 -17.2293,14.6798 -17.2293,14.6798 -17.2293,14.6797 -17.2294,14.6796 -17.2294,14.6795 -17.2293,14.6794 -17.2293,14.6793 -17.2292,14.6792 -17.2292,14.6791 -17.2292,14.6790 -17.2292,14.6789 -17.2292,14.6789 -17.2292,14.6788 -17.2292,14.6787 -17.2292,14.6786 -17.2291,14.6785 -17.2291,14.6784 -17.2291,14.6783 -17.2290,14.6782 -17.2289,14.6783 -17.2288,14.6783 -17.2287,14.6784 -17.2287,14.6785 -17.2287,14.6786 -17.2287,14.6787 -17.2288,14.6788 -17.2288,14.6789 -17.2288,14.6789 -17.2288,14.6790 -17.2287,14.6791 -17.2287,14.6792 -17.2287,14.6793 -17.2286,14.6794 -17.2285,14.6795 -17.2285,14.6796 -17.2286,14.6797 -17.2287,14.6798 -17.2287,14.6798 -17.2288,14.6799 -17.2288,14.6800 -17.2289,14.6801 -17.2290,14.6801 -17.2291,14.6801 
+
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+
+      </Polygon>        
+    </Placemark>      
+ 
+    <Placemark>
+      <name>2</name>
+      <styleUrl>#oil_spill</styleUrl>
+
+      <Polygon>
+        <tessellate>1</tessellate>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.2263,14.6839 -17.2263,14.6838 -17.2263,14.6837 -17.2263,14.6836 -17.2263,14.6835 -17.2264,14.6834 -17.2264,14.6833 -17.2264,14.6833 -17.2264,14.6832 -17.2264,14.6831 -17.2264,14.6830 -17.2264,14.6829 -17.2263,14.6828 -17.2263,14.6827 -17.2262,14.6826 -17.2261,14.6825 -17.2261,14.6825 -17.2261,14.6824 -17.2261,14.6823 -17.2261,14.6822 -17.2261,14.6821 -17.2260,14.6820 -17.2259,14.6819 -17.2259,14.6818 -17.2258,14.6817 -17.2257,14.6816 -17.2257,14.6816 -17.2257,14.6815 -17.2257,14.6814 -17.2257,14.6813 -17.2257,14.6812 -17.2257,14.6811 -17.2257,14.6810 -17.2257,14.6809 -17.2257,14.6808 -17.2257,14.6807 -17.2257,14.6807 -17.2257,14.6806 -17.2257,14.6805 -17.2256,14.6804 -17.2256,14.6803 -17.2256,14.6802 -17.2256,14.6801 -17.2255,14.6800 -17.2255,14.6799 -17.2254,14.6798 -17.2253,14.6798 -17.2253,14.6797 -17.2253,14.6796 -17.2252,14.6795 -17.2252,14.6794 -17.2252,14.6793 -17.2252,14.6792 -17.2251,14.6791 -17.2251,14.6790 -17.2250,14.6789 -17.2250,14.6789 -17.2249,14.6788 -17.2249,14.6787 -17.2248,14.6786 -17.2247,14.6785 -17.2247,14.6784 -17.2246,14.6783 -17.2246,14.6782 -17.2245,14.6781 -17.2245,14.6780 -17.2244,14.6780 -17.2244,14.6779 -17.2243,14.6778 -17.2244,14.6777 -17.2244,14.6776 -17.2244,14.6775 -17.2244,14.6774 -17.2243,14.6773 -17.2243,14.6773 -17.2242,14.6773 -17.2241,14.6773 -17.2240,14.6772 -17.2240,14.6772 -17.2241,14.6771 -17.2241,14.6770 -17.2241,14.6769 -17.2241,14.6768 -17.2241,14.6767 -17.2240,14.6767 -17.2239,14.6766 -17.2238,14.6765 -17.2238,14.6764 -17.2237,14.6763 -17.2237,14.6763 -17.2236,14.6762 -17.2235,14.6761 -17.2234,14.6760 -17.2234,14.6759 -17.2234,14.6758 -17.2233,14.6757 -17.2232,14.6756 -17.2232,14.6755 -17.2231,14.6754 -17.2230,14.6754 -17.2229,14.6753 -17.2228,14.6752 -17.2227,14.6751 -17.2227,14.6750 -17.2226,14.6749 -17.2226,14.6748 -17.2226,14.6747 -17.2226,14.6746 -17.2225,14.6745 -17.2224,14.6745 -17.2223,14.6744 -17.2222,14.6743 -17.2221,14.6742 -17.2221,14.6741 -17.2220,14.6740 -17.2220,14.6739 -17.2220,14.6738 -17.2220,14.6737 -17.2220,14.6736 -17.2219,14.6736 -17.2219,14.6735 -17.2218,14.6734 -17.2217,14.6733 -17.2217,14.6732 -17.2217,14.6731 -17.2217,14.6730 -17.2217,14.6729 -17.2217,14.6728 -17.2217,14.6727 -17.2217,14.6727 -17.2216,14.6726 -17.2216,14.6725 -17.2216,14.6724 -17.2216,14.6723 -17.2216,14.6722 -17.2216,14.6721 -17.2216,14.6720 -17.2215,14.6719 -17.2215,14.6719 -17.2215,14.6718 -17.2215,14.6717 -17.2215,14.6716 -17.2214,14.6715 -17.2214,14.6714 -17.2213,14.6713 -17.2213,14.6712 -17.2212,14.6711 -17.2211,14.6711 -17.2210,14.6711 -17.2209,14.6711 -17.2208,14.6712 -17.2208,14.6713 -17.2207,14.6714 -17.2207,14.6715 -17.2207,14.6716 -17.2206,14.6717 -17.2206,14.6718 -17.2207,14.6719 -17.2207,14.6719 -17.2208,14.6720 -17.2208,14.6721 -17.2208,14.6722 -17.2208,14.6723 -17.2208,14.6724 -17.2208,14.6725 -17.2208,14.6726 -17.2208,14.6727 -17.2208,14.6727 -17.2207,14.6728 -17.2207,14.6729 -17.2207,14.6730 -17.2207,14.6731 -17.2207,14.6732 -17.2206,14.6733 -17.2206,14.6734 -17.2206,14.6735 -17.2206,14.6736 -17.2206,14.6736 -17.2206,14.6737 -17.2206,14.6738 -17.2206,14.6739 -17.2206,14.6740 -17.2207,14.6741 -17.2207,14.6742 -17.2207,14.6743 -17.2208,14.6744 -17.2208,14.6745 -17.2208,14.6745 -17.2208,14.6746 -17.2208,14.6747 -17.2208,14.6748 -17.2209,14.6749 -17.2209,14.6750 -17.2209,14.6751 -17.2209,14.6752 -17.2210,14.6753 -17.2210,14.6754 -17.2210,14.6754 -17.2210,14.6755 -17.2210,14.6756 -17.2210,14.6757 -17.2210,14.6758 -17.2211,14.6759 -17.2211,14.6760 -17.2212,14.6761 -17.2212,14.6762 -17.2213,14.6763 -17.2213,14.6763 -17.2213,14.6764 -17.2213,14.6765 -17.2213,14.6766 -17.2214,14.6767 -17.2214,14.6768 -17.2215,14.6769 -17.2215,14.6770 -17.2215,14.6771 -17.2215,14.6772 -17.2215,14.6772 -17.2215,14.6773 -17.2215,14.6774 -17.2215,14.6775 -17.2216,14.6776 -17.2216,14.6777 -17.2216,14.6778 -17.2215,14.6779 -17.2215,14.6780 -17.2215,14.6780 -17.2214,14.6781 -17.2214,14.6782 -17.2213,14.6783 -17.2212,14.6784 -17.2212,14.6785 -17.2212,14.6786 -17.2211,14.6787 -17.2211,14.6788 -17.2210,14.6789 -17.2210,14.6789 -17.2210,14.6790 -17.2209,14.6791 -17.2209,14.6792 -17.2209,14.6793 -17.2209,14.6794 -17.2209,14.6795 -17.2210,14.6796 -17.2210,14.6797 -17.2210,14.6798 -17.2210,14.6798 -17.2211,14.6799 -17.2212,14.6800 -17.2213,14.6801 -17.2213,14.6802 -17.2214,14.6803 -17.2215,14.6803 -17.2216,14.6804 -17.2217,14.6805 -17.2217,14.6806 -17.2218,14.6807 -17.2219,14.6807 -17.2220,14.6807 -17.2221,14.6807 -17.2222,14.6808 -17.2223,14.6809 -17.2224,14.6810 -17.2225,14.6811 -17.2226,14.6812 -17.2226,14.6813 -17.2227,14.6814 -17.2228,14.6815 -17.2229,14.6816 -17.2230,14.6816 -17.2231,14.6817 -17.2232,14.6818 -17.2233,14.6819 -17.2234,14.6820 -17.2234,14.6821 -17.2235,14.6822 -17.2236,14.6823 -17.2237,14.6824 -17.2238,14.6824 -17.2239,14.6825 -17.2240,14.6825 -17.2241,14.6825 -17.2242,14.6825 -17.2243,14.6826 -17.2243,14.6826 -17.2244,14.6827 -17.2245,14.6827 -17.2246,14.6828 -17.2247,14.6828 -17.2248,14.6829 -17.2249,14.6830 -17.2250,14.6831 -17.2251,14.6831 -17.2252,14.6831 -17.2252,14.6831 -17.2253,14.6831 -17.2254,14.6831 -17.2255,14.6832 -17.2256,14.6833 -17.2257,14.6833 -17.2257,14.6834 -17.2258,14.6835 -17.2258,14.6836 -17.2258,14.6837 -17.2259,14.6838 -17.2260,14.6839 -17.2261,14.6839 -17.2261,14.6839 -17.2262,14.6839 -17.2263,14.6839 
+
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+
+      </Polygon>        
+    </Placemark>      
+ 
+    <Placemark>
+      <name>3</name>
+      <styleUrl>#oil_spill</styleUrl>
+
+      <Polygon>
+        <tessellate>1</tessellate>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.2318,14.6875 -17.2319,14.6874 -17.2320,14.6874 -17.2320,14.6873 -17.2321,14.6872 -17.2321,14.6871 -17.2321,14.6870 -17.2322,14.6869 -17.2322,14.6869 -17.2322,14.6868 -17.2323,14.6867 -17.2323,14.6866 -17.2323,14.6865 -17.2322,14.6864 -17.2322,14.6863 -17.2321,14.6862 -17.2320,14.6861 -17.2320,14.6860 -17.2319,14.6860 -17.2318,14.6859 -17.2317,14.6859 -17.2316,14.6858 -17.2315,14.6857 -17.2314,14.6857 -17.2314,14.6856 -17.2313,14.6856 -17.2312,14.6855 -17.2311,14.6855 -17.2310,14.6855 -17.2309,14.6854 -17.2308,14.6853 -17.2307,14.6853 -17.2306,14.6852 -17.2305,14.6851 -17.2305,14.6851 -17.2304,14.6851 -17.2303,14.6850 -17.2302,14.6849 -17.2301,14.6848 -17.2300,14.6847 -17.2299,14.6846 -17.2298,14.6845 -17.2297,14.6845 -17.2296,14.6844 -17.2296,14.6843 -17.2295,14.6843 -17.2294,14.6842 -17.2293,14.6842 -17.2292,14.6842 -17.2291,14.6842 -17.2290,14.6843 -17.2289,14.6844 -17.2288,14.6845 -17.2287,14.6846 -17.2287,14.6847 -17.2286,14.6848 -17.2285,14.6849 -17.2285,14.6850 -17.2285,14.6851 -17.2285,14.6851 -17.2285,14.6852 -17.2285,14.6853 -17.2286,14.6854 -17.2287,14.6855 -17.2287,14.6855 -17.2288,14.6856 -17.2289,14.6857 -17.2290,14.6858 -17.2291,14.6858 -17.2292,14.6858 -17.2293,14.6859 -17.2294,14.6859 -17.2295,14.6860 -17.2296,14.6860 -17.2296,14.6860 -17.2297,14.6861 -17.2298,14.6861 -17.2299,14.6862 -17.2300,14.6863 -17.2301,14.6864 -17.2302,14.6864 -17.2303,14.6864 -17.2304,14.6865 -17.2305,14.6866 -17.2305,14.6867 -17.2306,14.6867 -17.2307,14.6867 -17.2308,14.6868 -17.2309,14.6868 -17.2310,14.6869 -17.2311,14.6869 -17.2312,14.6870 -17.2313,14.6871 -17.2314,14.6871 -17.2314,14.6871 -17.2315,14.6872 -17.2316,14.6873 -17.2317,14.6874 -17.2318,14.6875 
+
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+
+      </Polygon>        
+    </Placemark>      
+
+   </Folder>
+
+  </Folder>
+  <Folder>
+   <name>Detected Ships</name>
+   <TimeStamp>
+     <when>2021-06-03T19:18:06Z</when>
+   </TimeStamp>
+   
+      <Placemark>
+        <name>1</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">13.8398</SimpleData>
+          <SimpleData name="lon">-17.2271</SimpleData>
+          <SimpleData name="width">20.0</SimpleData>
+          <SimpleData name="length">28.0</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.2271,13.8398</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>2</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">13.9460</SimpleData>
+          <SimpleData name="lon">-16.7573</SimpleData>
+          <SimpleData name="width">38.6</SimpleData>
+          <SimpleData name="length">96.5</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-16.7573,13.9460</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>3</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.0364</SimpleData>
+          <SimpleData name="lon">-17.4973</SimpleData>
+          <SimpleData name="width">24.7</SimpleData>
+          <SimpleData name="length">62.2</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4973,14.0364</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>4</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.0019</SimpleData>
+          <SimpleData name="lon">-17.4211</SimpleData>
+          <SimpleData name="width">22.2</SimpleData>
+          <SimpleData name="length">55.6</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4211,14.0019</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>5</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.2401</SimpleData>
+          <SimpleData name="lon">-17.2420</SimpleData>
+          <SimpleData name="width">27.0</SimpleData>
+          <SimpleData name="length">36.3</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.2420,14.2401</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>6</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.5211</SimpleData>
+          <SimpleData name="lon">-17.2817</SimpleData>
+          <SimpleData name="width">36.9</SimpleData>
+          <SimpleData name="length">160.1</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.2817,14.5211</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>7</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.5096</SimpleData>
+          <SimpleData name="lon">-17.2761</SimpleData>
+          <SimpleData name="width">37.2</SimpleData>
+          <SimpleData name="length">306.9</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.2761,14.5096</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>8</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.3822</SimpleData>
+          <SimpleData name="lon">-17.3155</SimpleData>
+          <SimpleData name="width">22.3</SimpleData>
+          <SimpleData name="length">106.2</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3155,14.3822</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>9</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.5099</SimpleData>
+          <SimpleData name="lon">-17.7368</SimpleData>
+          <SimpleData name="width">20.0</SimpleData>
+          <SimpleData name="length">35.0</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.7368,14.5099</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>10</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.7130</SimpleData>
+          <SimpleData name="lon">-17.4247</SimpleData>
+          <SimpleData name="width">23.9</SimpleData>
+          <SimpleData name="length">75.4</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4247,14.7130</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>11</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.7253</SimpleData>
+          <SimpleData name="lon">-17.3491</SimpleData>
+          <SimpleData name="width">39.7</SimpleData>
+          <SimpleData name="length">134.4</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3491,14.7253</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>12</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6943</SimpleData>
+          <SimpleData name="lon">-17.4158</SimpleData>
+          <SimpleData name="width">30.7</SimpleData>
+          <SimpleData name="length">103.2</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4158,14.6943</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>13</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6957</SimpleData>
+          <SimpleData name="lon">-17.4077</SimpleData>
+          <SimpleData name="width">39.6</SimpleData>
+          <SimpleData name="length">53.0</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4077,14.6957</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>14</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6936</SimpleData>
+          <SimpleData name="lon">-17.4179</SimpleData>
+          <SimpleData name="width">33.8</SimpleData>
+          <SimpleData name="length">51.6</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4179,14.6936</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>15</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6946</SimpleData>
+          <SimpleData name="lon">-17.4108</SimpleData>
+          <SimpleData name="width">39.1</SimpleData>
+          <SimpleData name="length">86.8</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4108,14.6946</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>16</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6931</SimpleData>
+          <SimpleData name="lon">-17.4131</SimpleData>
+          <SimpleData name="width">34.9</SimpleData>
+          <SimpleData name="length">98.9</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4131,14.6931</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>17</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6914</SimpleData>
+          <SimpleData name="lon">-17.4165</SimpleData>
+          <SimpleData name="width">26.7</SimpleData>
+          <SimpleData name="length">51.4</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4165,14.6914</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>18</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6915</SimpleData>
+          <SimpleData name="lon">-17.4102</SimpleData>
+          <SimpleData name="width">36.7</SimpleData>
+          <SimpleData name="length">65.4</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4102,14.6915</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>19</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6914</SimpleData>
+          <SimpleData name="lon">-17.4049</SimpleData>
+          <SimpleData name="width">33.9</SimpleData>
+          <SimpleData name="length">90.0</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4049,14.6914</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>20</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6861</SimpleData>
+          <SimpleData name="lon">-17.4175</SimpleData>
+          <SimpleData name="width">27.9</SimpleData>
+          <SimpleData name="length">35.2</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4175,14.6861</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>21</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.7103</SimpleData>
+          <SimpleData name="lon">-17.2818</SimpleData>
+          <SimpleData name="width">23.8</SimpleData>
+          <SimpleData name="length">27.2</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.2818,14.7103</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>22</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6908</SimpleData>
+          <SimpleData name="lon">-17.3693</SimpleData>
+          <SimpleData name="width">46.1</SimpleData>
+          <SimpleData name="length">322.6</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3693,14.6908</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>23</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6800</SimpleData>
+          <SimpleData name="lon">-17.4209</SimpleData>
+          <SimpleData name="width">39.0</SimpleData>
+          <SimpleData name="length">147.6</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4209,14.6800</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>24</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6919</SimpleData>
+          <SimpleData name="lon">-17.3553</SimpleData>
+          <SimpleData name="width">43.3</SimpleData>
+          <SimpleData name="length">95.0</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3553,14.6919</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>25</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6852</SimpleData>
+          <SimpleData name="lon">-17.3494</SimpleData>
+          <SimpleData name="width">37.5</SimpleData>
+          <SimpleData name="length">101.2</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3494,14.6852</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>26</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6702</SimpleData>
+          <SimpleData name="lon">-17.4112</SimpleData>
+          <SimpleData name="width">57.9</SimpleData>
+          <SimpleData name="length">101.2</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.4112,14.6702</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>27</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6821</SimpleData>
+          <SimpleData name="lon">-17.3411</SimpleData>
+          <SimpleData name="width">45.0</SimpleData>
+          <SimpleData name="length">132.4</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3411,14.6821</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>28</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6783</SimpleData>
+          <SimpleData name="lon">-17.3540</SimpleData>
+          <SimpleData name="width">29.9</SimpleData>
+          <SimpleData name="length">88.9</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3540,14.6783</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>29</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6737</SimpleData>
+          <SimpleData name="lon">-17.3455</SimpleData>
+          <SimpleData name="width">32.2</SimpleData>
+          <SimpleData name="length">74.1</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3455,14.6737</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>30</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6674</SimpleData>
+          <SimpleData name="lon">-17.3565</SimpleData>
+          <SimpleData name="width">39.5</SimpleData>
+          <SimpleData name="length">157.9</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3565,14.6674</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>31</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6654</SimpleData>
+          <SimpleData name="lon">-17.3172</SimpleData>
+          <SimpleData name="width">49.7</SimpleData>
+          <SimpleData name="length">201.9</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3172,14.6654</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>32</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6435</SimpleData>
+          <SimpleData name="lon">-17.3733</SimpleData>
+          <SimpleData name="width">35.8</SimpleData>
+          <SimpleData name="length">133.0</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3733,14.6435</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>33</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6353</SimpleData>
+          <SimpleData name="lon">-17.3830</SimpleData>
+          <SimpleData name="width">39.9</SimpleData>
+          <SimpleData name="length">335.3</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3830,14.6353</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>34</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6342</SimpleData>
+          <SimpleData name="lon">-17.3691</SimpleData>
+          <SimpleData name="width">35.4</SimpleData>
+          <SimpleData name="length">132.4</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3691,14.6342</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>35</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6373</SimpleData>
+          <SimpleData name="lon">-17.3338</SimpleData>
+          <SimpleData name="width">30.1</SimpleData>
+          <SimpleData name="length">39.3</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3338,14.6373</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>36</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6378</SimpleData>
+          <SimpleData name="lon">-17.3236</SimpleData>
+          <SimpleData name="width">27.5</SimpleData>
+          <SimpleData name="length">102.4</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3236,14.6378</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>37</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6374</SimpleData>
+          <SimpleData name="lon">-17.3135</SimpleData>
+          <SimpleData name="width">23.0</SimpleData>
+          <SimpleData name="length">107.6</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3135,14.6374</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>38</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6215</SimpleData>
+          <SimpleData name="lon">-17.3910</SimpleData>
+          <SimpleData name="width">20.4</SimpleData>
+          <SimpleData name="length">36.0</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3910,14.6215</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>39</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6130</SimpleData>
+          <SimpleData name="lon">-17.3663</SimpleData>
+          <SimpleData name="width">49.2</SimpleData>
+          <SimpleData name="length">224.7</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3663,14.6130</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>40</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6127</SimpleData>
+          <SimpleData name="lon">-17.3516</SimpleData>
+          <SimpleData name="width">39.9</SimpleData>
+          <SimpleData name="length">284.9</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3516,14.6127</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>41</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.6147</SimpleData>
+          <SimpleData name="lon">-17.3330</SimpleData>
+          <SimpleData name="width">53.9</SimpleData>
+          <SimpleData name="length">162.4</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3330,14.6147</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>42</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.5969</SimpleData>
+          <SimpleData name="lon">-17.3483</SimpleData>
+          <SimpleData name="width">44.7</SimpleData>
+          <SimpleData name="length">230.0</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3483,14.5969</coordinates></Point>
+      </Placemark>
+   
+      <Placemark>
+        <name>43</name>
+        #<styleUrl>#ship</styleUrl>      
+        <ExtendedData><SchemaData schemaUrl="#detected_ships_sar">
+          <SimpleData name="lat">14.5874</SimpleData>
+          <SimpleData name="lon">-17.3698</SimpleData>
+          <SimpleData name="width">61.1</SimpleData>
+          <SimpleData name="length">188.3</SimpleData>
+        </SchemaData></ExtendedData>
+        <Point><coordinates>-17.3698,14.5874</coordinates></Point>
+      </Placemark>
+  </Folder>
+
+  <Folder>
+   <name>Covered area</name>
+
+    <Placemark>
+      <name>_</name>
+      <styleUrl>#image</styleUrl>
+      <Polygon>
+        <tessellate>1</tessellate>
+
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.7973,13.5933 -17.8947,14.0658 -18.0205,14.6767 -17.3414,14.8078 -17.3430,14.8058 -17.3624,14.8015 -17.3634,14.7984 -17.3657,14.7996 -17.3663,14.7980 -17.3699,14.7962 -17.3714,14.7966 -17.3728,14.7951 -17.3741,14.7958 -17.3812,14.7920 -17.3936,14.7877 -17.3939,14.7867 -17.4010,14.7835 -17.4127,14.7798 -17.4267,14.7735 -17.4425,14.7681 -17.4511,14.7656 -17.4553,14.7656 -17.4629,14.7642 -17.4712,14.7626 -17.4719,14.7626 -17.4770,14.7644 -17.4788,14.7656 -17.4813,14.7670 -17.4826,14.7656 -17.4827,14.7656 -17.4888,14.7582 -17.4912,14.7586 -17.4958,14.7549 -17.5009,14.7566 -17.5040,14.7542 -17.5087,14.7555 -17.5096,14.7507 -17.5177,14.7512 -17.5203,14.7483 -17.5267,14.7518 -17.5291,14.7475 -17.5292,14.7472 -17.5287,14.7448 -17.5301,14.7436 -17.5304,14.7402 -17.5212,14.7402 -17.5180,14.7388 -17.5159,14.7374 -17.5046,14.7256 -17.5047,14.7216 -17.5040,14.7192 -17.5033,14.7185 -17.5010,14.7174 -17.4983,14.7173 -17.4973,14.7148 -17.4970,14.7146 -17.4952,14.7140 -17.4909,14.7149 -17.4884,14.7069 -17.4854,14.7060 -17.4842,14.7037 -17.4800,14.7019 -17.4773,14.6992 -17.4759,14.6992 -17.4746,14.6980 -17.4742,14.6972 -17.4737,14.6948 -17.4778,14.6925 -17.4690,14.6840 -17.4698,14.6798 -17.4689,14.6785 -17.4706,14.6766 -17.4700,14.6739 -17.4651,14.6761 -17.4634,14.6747 -17.4620,14.6778 -17.4604,14.6782 -17.4591,14.6776 -17.4585,14.6734 -17.4528,14.6735 -17.4470,14.6716 -17.4456,14.6678 -17.4432,14.6659 -17.4442,14.6598 -17.4362,14.6546 -17.4359,14.6543 -17.4354,14.6501 -17.4351,14.6472 -17.4349,14.6468 -17.4329,14.6462 -17.4318,14.6466 -17.4315,14.6469 -17.4297,14.6504 -17.4296,14.6510 -17.4299,14.6513 -17.4305,14.6519 -17.4303,14.6545 -17.4328,14.6556 -17.4336,14.6577 -17.4333,14.6591 -17.4317,14.6601 -17.4310,14.6645 -17.4255,14.6691 -17.4213,14.6690 -17.4205,14.6746 -17.4243,14.6760 -17.4249,14.6744 -17.4264,14.6742 -17.4259,14.6773 -17.4277,14.6780 -17.4288,14.6801 -17.4321,14.6812 -17.4315,14.6823 -17.4296,14.6823 -17.4302,14.6858 -17.4315,14.6867 -17.4338,14.6845 -17.4338,14.6880 -17.4309,14.6878 -17.4287,14.6891 -17.4270,14.6862 -17.4253,14.6867 -17.4258,14.6837 -17.4197,14.6820 -17.4190,14.6828 -17.4198,14.6860 -17.4229,14.6885 -17.4255,14.6946 -17.4209,14.6995 -17.4168,14.7010 -17.4176,14.7057 -17.4223,14.7047 -17.4241,14.7064 -17.4255,14.7043 -17.4276,14.7062 -17.4271,14.7069 -17.4294,14.7091 -17.4297,14.7099 -17.4307,14.7148 -17.4304,14.7167 -17.4292,14.7207 -17.4290,14.7211 -17.4255,14.7257 -17.4244,14.7269 -17.4151,14.7328 -17.3959,14.7385 -17.3735,14.7399 -17.3694,14.7399 -17.3608,14.7386 -17.3498,14.7367 -17.3493,14.7365 -17.3420,14.7334 -17.3395,14.7339 -17.3063,14.7197 -17.3014,14.7185 -17.3013,14.7168 -17.3001,14.7179 -17.2942,14.7165 -17.2896,14.7134 -17.2818,14.7105 -17.2802,14.7123 -17.2774,14.7126 -17.2645,14.7085 -17.2582,14.7058 -17.2469,14.7002 -17.2424,14.6973 -17.2422,14.6971 -17.2329,14.6880 -17.2266,14.6842 -17.2234,14.6833 -17.2109,14.6728 -17.2037,14.6682 -17.1964,14.6620 -17.1895,14.6551 -17.1882,14.6538 -17.1884,14.6522 -17.1881,14.6519 -17.1854,14.6497 -17.1839,14.6467 -17.1786,14.6427 -17.1734,14.6345 -17.1705,14.6331 -17.1663,14.6288 -17.1585,14.6182 -17.1523,14.6067 -17.1526,14.6047 -17.1505,14.6031 -17.1504,14.6029 -17.1491,14.5997 -17.1495,14.5969 -17.1480,14.5959 -17.1479,14.5956 -17.1466,14.5909 -17.1452,14.5898 -17.1450,14.5898 -17.1438,14.5880 -17.1435,14.5853 -17.1373,14.5735 -17.1313,14.5656 -17.1256,14.5630 -17.1238,14.5595 -17.1174,14.5563 -17.1115,14.5505 -17.1079,14.5484 -17.1050,14.5424 -17.1051,14.5389 -17.0992,14.5309 -17.0974,14.5261 -17.0917,14.5081 -17.0908,14.4982 -17.0878,14.4934 -17.0859,14.4988 -17.0841,14.4987 -17.0833,14.5004 -17.0821,14.5002 -17.0822,14.4976 -17.0840,14.4963 -17.0840,14.4937 -17.0863,14.4903 -17.0800,14.4865 -17.0778,14.4800 -17.0719,14.4727 -17.0647,14.4714 -17.0616,14.4670 -17.0574,14.4550 -17.0482,14.4494 -17.0382,14.4488 -17.0356,14.4470 -17.0291,14.4482 -17.0224,14.4413 -17.0168,14.4396 -17.0129,14.4370 -17.0102,14.4380 -17.0071,14.4368 -17.0031,14.4341 -16.9950,14.4237 -16.9912,14.4220 -16.9832,14.4148 -16.9809,14.4145 -16.9807,14.4141 -16.9759,14.4091 -16.9678,14.4055 -16.9672,14.4050 -16.9601,14.3972 -16.9567,14.3876 -16.9508,14.3838 -16.9476,14.3795 -16.9453,14.3752 -16.9444,14.3726 -16.9438,14.3656 -16.9359,14.3594 -16.9363,14.3576 -16.9335,14.3516 -16.9304,14.3388 -16.9303,14.3300 -16.9323,14.3205 -16.9328,14.3080 -16.9317,14.2951 -16.9291,14.2861 -16.9226,14.2862 -16.9144,14.2843 -16.9059,14.2739 -16.9007,14.2651 -16.8978,14.2615 -16.8904,14.2544 -16.8811,14.2432 -16.8782,14.2383 -16.8782,14.2383 -16.8759,14.2340 -16.8750,14.2307 -16.8710,14.2207 -16.8710,14.2164 -16.8698,14.2153 -16.8689,14.2010 -16.8667,14.1911 -16.8670,14.1860 -16.8553,14.1790 -16.8456,14.1627 -16.8318,14.1506 -16.8260,14.1439 -16.8251,14.1434 -16.8293,14.1514 -16.8293,14.1538 -16.8281,14.1551 -16.8250,14.1550 -16.8233,14.1582 -16.8222,14.1588 -16.8215,14.1589 -16.8208,14.1584 -16.8200,14.1570 -16.8197,14.1537 -16.8170,14.1496 -16.8138,14.1494 -16.8139,14.1474 -16.8176,14.1447 -16.8173,14.1414 -16.8171,14.1410 -16.8099,14.1366 -16.8076,14.1382 -16.8064,14.1352 -16.8017,14.1326 -16.8021,14.1298 -16.7934,14.1166 -16.7856,14.0986 -16.7804,14.0797 -16.7795,14.0714 -16.7761,14.0625 -16.7736,14.0540 -16.7726,14.0312 -16.7687,14.0065 -16.7645,13.9395 -16.7631,13.9309 -16.7616,13.9296 -16.7613,13.9295 -16.7605,13.9301 -16.7604,13.9305 -16.7614,13.9340 -16.7607,13.9365 -16.7625,13.9412 -16.7618,13.9512 -16.7625,13.9536 -16.7578,13.9672 -16.7575,13.9678 -16.7535,13.9742 -16.7532,13.9746 -16.7507,13.9767 -16.7459,13.9786 -16.7443,13.9819 -16.7439,13.9821 -16.7418,13.9799 -16.7369,13.9810 -16.7320,13.9884 -16.7313,13.9889 -16.7223,13.9767 -16.7229,13.9761 -16.7435,13.9516 -16.7433,13.9492 -16.7431,13.9488 -16.7358,13.9371 -16.7357,13.9366 -16.7359,13.9348 -16.7390,13.9318 -16.7382,13.9245 -16.7376,13.9239 -16.7367,13.9227 -16.7365,13.9221 -16.7384,13.9178 -16.7384,13.9170 -16.7376,13.9147 -16.7351,13.9135 -16.7320,13.9147 -16.7297,13.9180 -16.7293,13.9166 -16.7319,13.9137 -16.7320,13.9135 -16.7371,13.9120 -16.7369,13.9112 -16.7342,13.9097 -16.7278,13.9098 -16.7273,13.9056 -16.7305,13.9057 -16.7323,13.9045 -16.7350,13.8993 -16.7353,13.8988 -16.7318,13.8918 -16.7316,13.8911 -16.7324,13.8867 -16.7325,13.8867 -16.7320,13.8815 -16.7336,13.8802 -16.7338,13.8784 -16.7312,13.8731 -16.7263,13.8698 -16.7272,13.8684 -16.7257,13.8615 -16.7274,13.8520 -16.7280,13.8511 -16.7283,13.8510 -16.7302,13.8531 -16.7280,13.8587 -16.7284,13.8610 -16.7328,13.8575 -16.7346,13.8538 -16.7348,13.8529 -16.7331,13.8472 -16.7294,13.8436 -16.7293,13.8376 -16.7330,13.8405 -16.7354,13.8461 -16.7368,13.8510 -16.7362,13.8551 -16.7379,13.8530 -16.7384,13.8520 -16.7383,13.8491 -16.7348,13.8405 -16.7280,13.8266 -16.7198,13.8140 -16.7065,13.8023 -16.6937,13.7800 -16.6919,13.7788 -16.6844,13.7782 -16.6841,13.7783 -16.6777,13.7857 -16.6776,13.7862 -16.6776,13.7939 -16.6762,13.7979 -16.6750,13.7987 -16.6743,13.7947 -16.6733,13.7948 -16.6685,13.7979 -16.6682,13.7987 -16.6681,13.8001 -16.6691,13.8012 -16.6694,13.8024 -16.6685,13.8029 -16.6682,13.8013 -16.6651,13.8033 -16.6626,13.8027 -16.6613,13.8041 -16.6611,13.8047 -16.6540,13.7987 -16.6547,13.7979 -16.6551,13.7956 -16.6527,13.7924 -16.6512,13.7919 -16.6500,13.7924 -16.6495,13.7929 -16.6482,13.7951 -16.6450,13.7935 -16.6457,13.7921 -16.6444,13.7898 -16.6448,13.7881 -16.6445,13.7877 -16.6413,13.7866 -16.6383,13.7866 -16.6355,13.7877 -16.6204,13.7727 -16.6229,13.7698 -16.6233,13.7691 -16.6245,13.7666 -16.6241,13.7633 -16.6274,13.7531 -16.6313,13.7471 -16.6327,13.7426 -16.6321,13.7387 -16.6333,13.7370 -16.6333,13.7357 -16.6332,13.7356 -16.6296,13.7309 -16.6288,13.7308 -16.6271,13.7311 -16.6267,13.7282 -16.6309,13.7279 -16.6333,13.7269 -16.6337,13.7265 -16.6374,13.7169 -16.6386,13.7109 -16.6385,13.7109 -16.6382,13.7036 -16.6354,13.6948 -16.6300,13.6851 -16.6200,13.6623 -16.6187,13.6573 -16.6165,13.6566 -16.6173,13.6598 -16.6167,13.6646 -16.6164,13.6614 -16.6136,13.6594 -16.6102,13.6613 -16.6094,13.6646 -16.6092,13.6611 -16.6132,13.6581 -16.6141,13.6557 -16.6142,13.6544 -16.6127,13.6506 -16.6054,13.6459 -16.5939,13.6415 -16.5934,13.6415 -16.5874,13.6422 -16.5850,13.6437 -16.5821,13.6467 -16.5782,13.6423 -16.5808,13.6391 -16.5818,13.6351 -16.5844,13.6350 -16.5853,13.6342 -16.5853,13.6335 -16.5850,13.6326 -16.5821,13.6307 -16.5778,13.6300 -16.5745,13.6281 -16.5746,13.6255 -16.5790,13.6264 -16.5780,13.6237 -16.5787,13.6226 -16.5803,13.6263 -16.5830,13.6270 -16.5848,13.6268 -16.5851,13.6263 -16.5847,13.6250 -16.5842,13.6246 -16.5705,13.6155 -16.5693,13.6144 -16.5674,13.6123 -16.5651,13.6093 -16.5597,13.5985 -16.5592,13.5974 -16.5573,13.5974 -16.5563,13.5974 -16.5529,13.6004 -16.5504,13.6024 -16.5498,13.6027 -16.5495,13.6028 -16.5465,13.6008 -16.5467,13.6006 -16.5467,13.6000 -16.5451,13.5933 -16.5483,13.5933 -17.7973,13.5933 
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.4796,14.7675 -17.4784,14.7674 -17.4758,14.7685 -17.4758,14.7689 -17.4775,14.7705 -17.4795,14.7698 -17.4802,14.7683 -17.4796,14.7675 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.5172,14.7543 -17.5162,14.7540 -17.5127,14.7543 -17.5114,14.7558 -17.5105,14.7566 -17.5118,14.7577 -17.5122,14.7579 -17.5151,14.7578 -17.5172,14.7546 -17.5172,14.7543 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.5424,14.7421 -17.5425,14.7411 -17.5419,14.7415 -17.5407,14.7424 -17.5407,14.7438 -17.5393,14.7448 -17.5370,14.7456 -17.5373,14.7464 -17.5374,14.7466 -17.5377,14.7469 -17.5423,14.7446 -17.5424,14.7439 -17.5424,14.7421 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.4734,14.6509 -17.4721,14.6505 -17.4714,14.6509 -17.4692,14.6522 -17.4690,14.6525 -17.4690,14.6525 -17.4686,14.6548 -17.4687,14.6553 -17.4699,14.6567 -17.4729,14.6574 -17.4756,14.6555 -17.4738,14.6547 -17.4736,14.6528 -17.4734,14.6509 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.4681,14.6513 -17.4682,14.6498 -17.4680,14.6493 -17.4670,14.6488 -17.4668,14.6491 -17.4677,14.6511 -17.4681,14.6513 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-16.6533,13.6461 -16.6535,13.6491 -16.6558,13.6490 -16.6464,13.6320 -16.6430,13.6273 -16.6418,13.6261 -16.6387,13.6243 -16.6346,13.6233 -16.6329,13.6231 -16.6320,13.6232 -16.6307,13.6238 -16.6301,13.6244 -16.6282,13.6271 -16.6299,13.6259 -16.6321,13.6272 -16.6346,13.6262 -16.6390,13.6341 -16.6443,13.6345 -16.6446,13.6369 -16.6449,13.6388 -16.6471,13.6391 -16.6478,13.6394 -16.6503,13.6427 -16.6531,13.6457 -16.6533,13.6461 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-16.6373,13.6561 -16.6386,13.6564 -16.6389,13.6563 -16.6411,13.6537 -16.6415,13.6539 -16.6427,13.6574 -16.6436,13.6504 -16.6404,13.6521 -16.6373,13.6561 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-16.6385,13.6798 -16.6395,13.6806 -16.6399,13.6801 -16.6414,13.6672 -16.6431,13.6656 -16.6430,13.6634 -16.6447,13.6602 -16.6437,13.6591 -16.6432,13.6592 -16.6383,13.6625 -16.6331,13.6699 -16.6330,13.6705 -16.6334,13.6738 -16.6336,13.6743 -16.6366,13.6764 -16.6361,13.6787 -16.6363,13.6790 -16.6385,13.6798 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-16.6382,13.6809 -16.6373,13.6800 -16.6360,13.6801 -16.6377,13.6815 -16.6382,13.6809 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-16.6378,13.6913 -16.6381,13.6915 -16.6390,13.6853 -16.6382,13.6832 -16.6372,13.6828 -16.6363,13.6829 -16.6356,13.6834 -16.6351,13.6859 -16.6378,13.6913 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-16.7233,13.7727 -16.7259,13.7731 -16.7270,13.7727 -16.7258,13.7721 -16.7233,13.7724 -16.7233,13.7727 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-16.7492,13.8291 -16.7502,13.8312 -16.7519,13.8311 -16.7549,13.8344 -16.7541,13.8419 -16.7569,13.8515 -16.7570,13.8556 -16.7567,13.8606 -16.7549,13.8640 -16.7547,13.8652 -16.7560,13.8692 -16.7543,13.8753 -16.7553,13.8855 -16.7558,13.8867 -16.7563,13.8867 -16.7564,13.8868 -16.7575,13.8926 -16.7589,13.8867 -16.7590,13.8867 -16.7600,13.8761 -16.7601,13.8745 -16.7593,13.8740 -16.7609,13.8718 -16.7612,13.8643 -16.7587,13.8372 -16.7587,13.8286 -16.7586,13.8096 -16.7561,13.8039 -16.7535,13.8057 -16.7535,13.8095 -16.7514,13.8145 -16.7490,13.8199 -16.7490,13.8254 -16.7492,13.8291 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-16.7400,13.8867 -16.7405,13.8851 -16.7402,13.8835 -16.7399,13.8840 -16.7391,13.8867 -16.7390,13.8867 -16.7395,13.8877 -16.7399,13.8867 -16.7400,13.8867 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-16.8231,14.1548 -16.8236,14.1549 -16.8246,14.1539 -16.8248,14.1536 -16.8245,14.1505 -16.8195,14.1497 -16.8200,14.1507 -16.8221,14.1544 -16.8231,14.1548 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+
+        <innerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+-17.3989,14.6715 -17.3995,14.6716 -17.4009,14.6692 -17.4010,14.6687 -17.3991,14.6634 -17.3988,14.6632 -17.3975,14.6625 -17.3957,14.6641 -17.3958,14.6644 -17.3962,14.6665 -17.3964,14.6672 -17.3989,14.6715 
+            </coordinates>
+          </LinearRing>
+        </innerBoundaryIs>
+        
+      </Polygon>
+    </Placemark>
+
+  </Folder>
+
+</Document>
+</kml>
